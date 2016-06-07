@@ -29,7 +29,7 @@ $(document).ready(function(){
 	console.log('showing ' + characters.length);
 	characters.forEach(function(character, i){
 		var article = 
-		$("<article class='col-xs-2 thumbnail character'><h6 class='text-center name'>" + character.name + "</h6><img class='img-responsive center-block' src='" + character.img + "' width='100' height='100'><h6 class='text-center health'>"+ character.healthPoints + "</h6></article>"
+		$("<article class='col-xs-2 thumbnail character'><h6 class='text-center name'>" + character.name + "</h6><img class='img-responsive center-block' src='" + character.img + "' width='85' height='85'><h6 class='text-center health'>"+ character.healthPoints + "</h6></article>"
 		);
 		article.attr("data-let", character.name);
 		// article.data('let', character.name);
@@ -78,7 +78,7 @@ $(document).ready(function(){
 		// 	console.log('data-let: ' + $(this).data('let'));
 		// })
 		if ($('.defender').length) {
-			// $('.enemy').hide();
+			$('.enemy').hide();
 		} else {
 			$('enemy').show();
 		};
@@ -115,7 +115,8 @@ $(document).ready(function(){
 
 			if (defender.healthPoints < 0) {
 				$('.defender').remove();
-				// $('enemy').show();
+				$('.enemy').show();
+				console.log('show me ');
 				span = 'You have defated ' + defender.name + ', you can choose to fight another enemy '
 			} else {
 				$('.defender-section').append(defenderElem);
