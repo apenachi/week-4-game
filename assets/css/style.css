@@ -1,0 +1,37 @@
+body {
+	background-image: url('../images/starwars.jpg');
+	background-size: 100% 150%;
+	background-repeat: no-repeat;
+}
+.selection, .name, .thumbnail, .health{
+	/*border: 1px solid #ccc;*/
+	/*margin-top: 10px;*/
+	/*opacity: 0.6;*/
+}
+.page-header {
+	margin-top: 10px;
+	height: 75px;
+}
+img {
+	/*opacity: 0.5;*/
+}
+h4, p {
+	color: #fff;
+}
+h6 {
+	color: black;
+	font-weight: bold;
+}
+.ally {
+	background-color: green;
+}
+.enemy {
+	background-color: yellow;
+}
+.defender {
+	background-color: red;
+}
+.ally, .defender, .enemy {
+	font-size: 20px;
+	/*opacity: 0.5;*/
+}
