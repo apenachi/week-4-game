@@ -29,7 +29,7 @@ $(document).ready(function(){
 	console.log('showing ' + characters.length);
 	characters.forEach(function(character, i){
 		var article = 
-		$("<article class='col-xs-2 thumbnail character'><h6 class='text-center name'>" + character.name + "</h6><img class='img-responsive center-block' src='" + character.img + "' width='85' height='85'><h6 class='text-center health'>"+ character.healthPoints + "</h6></article>"
+		$("<article class='col-xs-2 thumbnail character'><h6 class='text-center name'>" + character.name + "</h6><img class='img-responsive center-block' src='" + character.img + "' width='125' height='125'><h6 class='text-center health'>"+ character.healthPoints + "</h6></article>"
 		);
 		article.attr("data-let", character.name);
 		// article.data('let', character.name);
