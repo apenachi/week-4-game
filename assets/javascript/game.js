@@ -29,7 +29,7 @@ $(document).ready(function(){
 	console.log('showing ' + characters.length);
 	characters.forEach(function(character, i){
 		var article = 
-		$("<article class='col-xs-2 thumbnail character'><h6 class='text-center name'>" + character.name + "</h6><img class='img-responsive center-block' src='" + character.img + "' width='125' height='125'><h6 class='text-center health'>"+ character.healthPoints + "</h6></article>"
+		$("<article class='col-xs-2 thumbnail character'><h6 class='text-center name'>" + character.name + "</h6><img class='img-responsive center-block' src='" + character.img + "' width='150' height='150'><h6 class='text-center health'>"+ character.healthPoints + "</h6></article>"
 		);
 		article.attr("data-let", character.name);
 		// article.data('let', character.name);
@@ -110,10 +110,13 @@ $(document).ready(function(){
 			console.log(defender.healthPoints);
 			var span = '';
 			var defenderElem = 
-			$("<article class='col-xs-2 thumbnail character defender'><h6 class='text-center name'>" + defender.name + "</h6><img class='img-responsive center-block' src='" + defender.img + "' width='100' height='100'><h6 class='text-center health'>" + defender.healthPoints + "</h6></article>"
+			$("<article class='col-xs-2 thumbnail character defender'><h6 class='text-center name'>" + defender.name + "</h6><img class='img-responsive center-block' src='" + defender.img + "' width='150' height='150'><h6 class='text-center health'>" + defender.healthPoints + "</h6></article>"
 			);
 
 			if (defender.healthPoints < 0) {
+				$('.defender').fadeOut('slow', function() {
+
+				});
 				$('.defender').remove();
 				$('.enemy').show();
 				console.log('show me ');
@@ -135,7 +138,7 @@ $(document).ready(function(){
 			// ally.increaseAttackPower(times);
 			
 			var allyElem = 
-			$("<article class='col-xs-2 thumbnail character ally'><h6 class='text-center name'>" + ally.name + "</h6><img class='img-responsive center-block' src='" + ally.img + "' width='100' height='100'><h6 class='text-center health'>"+ ally.healthPoints+ "</h6></article>"
+			$("<article class='col-xs-2 thumbnail character ally'><h6 class='text-center name'>" + ally.name + "</h6><img class='img-responsive center-block' src='" + ally.img + "' width='150' height='150'><h6 class='text-center health'>"+ ally.healthPoints+ "</h6></article>"
 			);
 			$('.ally-section').append(allyElem);
 
